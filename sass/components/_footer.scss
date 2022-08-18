@@ -1,0 +1,69 @@
+.footer {
+    background-color: var(--title-background-color);
+}
+
+.logo-address-wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-right: 70px;
+}
+
+.contacts {
+    width: 230px;
+}
+
+.contacts__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.contacts__address {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.71;
+    color: var(--title-color);
+}
+
+.contacts__mail,
+.contacts__tel {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.social-wrapper {
+    padding-top: 72px;
+    margin-right: 92px;
+}
+
+.footer__wrapper-description {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-bottom: 20px;
+}
+
+.subscription-form-wrapper {
+    padding-top: 72px;
+    width: 100%;
+}
+
+.subscription-form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscription-form__input {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding-left: 16px;
+    color: var(--title-color);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
