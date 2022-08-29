@@ -61,7 +61,69 @@
                         >
                     </li>
                 </ul>
+                <!-- =================== BURGER BUTTON =================== -->
+                <button type="button" class="mobile-menu-open-btn" data-menu-open>
+                    <svg class="mobile-menu-open-btn__icon" width="40" height="40">
+                        <use href="./images/sprite.svg#burger-icon"></use>
+                    </svg>
+                </button>
+                <!-- =================== /BURGER BUTTON =================== -->
             </div>
+            <!-- =================== MOBILE MENU =================== -->
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu__container">
+                    <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                        <svg class="mobile-menu__close-icon" width="40" height="40">
+                            <use href="./images/sprite.svg#close-icon"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link mobile-menu__link_active" href="index.html"
+                                >Студия</a
+                            >
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a
+                                class="mobile-menu__link"
+                                href="#contacts"
+                                contacts__mobile-menu-close
+                                >Контакты</a
+                            >
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__contacts">
+                        <li class="mobile-menu__contacts-item">
+                            <a class="mobile-menu__tel" href="tel:+380961111111">
+                                +38 096 111 11 11</a
+                            >
+                        </li>
+                        <li class="mobile-menu__contacts-item">
+                            <a class="mobile-menu__mail" href="mailto:info@devstudio.com" lang="en">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__social">
+                        <li class="mobile-menu__social-item">
+                            <a href="#" class="mobile-menu__social-link">Instagram</a>
+                        </li>
+                        <li class="mobile-menu__social-item">
+                            <a href="#" class="mobile-menu__social-link">Twitter</a>
+                        </li>
+                        <li class="mobile-menu__social-item">
+                            <a href="#" class="mobile-menu__social-link">Facebook</a>
+                        </li>
+                        <li class="mobile-menu__social-item">
+                            <a href="#" class="mobile-menu__social-link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- =================== /MOBILE MENU =================== -->
         </header>
         <!-- =================== /HEADER =================== -->
         <!-- =================== MAIN =================== -->
@@ -81,7 +143,7 @@
                     <ul class="benefits">
                         <li class="benefits__card" tabindex="0">
                             <div class="benefits__icon-wrapper">
-                                <svg class="benefits__icon">
+                                <svg class="benefits__icon" width="70" height="70">
                                     <use href="./images/sprite.svg#antenna"></use>
                                 </svg>
                             </div>
@@ -93,7 +155,7 @@
                         </li>
                         <li class="benefits__card" tabindex="0">
                             <div class="benefits__icon-wrapper">
-                                <svg class="benefits__icon">
+                                <svg class="benefits__icon" width="70" height="70">
                                     <use href="./images/sprite.svg#clock"></use>
                                 </svg>
                             </div>
@@ -105,7 +167,7 @@
                         </li>
                         <li class="benefits__card" tabindex="0">
                             <div class="benefits__icon-wrapper">
-                                <svg class="benefits__icon">
+                                <svg class="benefits__icon" width="70" height="70">
                                     <use href="./images/sprite.svg#diagram"></use>
                                 </svg>
                             </div>
@@ -117,7 +179,7 @@
                         </li>
                         <li class="benefits__card" tabindex="0">
                             <div class="benefits__icon-wrapper">
-                                <svg class="benefits__icon">
+                                <svg class="benefits__icon" width="70" height="70">
                                     <use href="./images/sprite.svg#astronaut"></use>
                                 </svg>
                             </div>
@@ -132,38 +194,81 @@
             </section>
             <!-- =================== /BENEFITS =================== -->
             <!-- =================== OUR WORKS =================== -->
-            <section class="section section_no_padding_top">
+            <section class="section section__our-works section_no-padding-top">
                 <div class="container">
                     <h2 class="section-title">Чем мы занимаемся</h2>
                     <ul class="our-works">
                         <li class="our-works__card" tabindex="0">
-                            <img
-                                class="our-works__img"
-                                src="./images/our-works/img-1.jpg"
-                                alt="Планшет и клавиатура на столе"
-                                width="370"
-                                height="294"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/our-works/img-1-desktop.webp    1x,
+                                        ./images/our-works/img-1-desktop@2x.webp 2x
+                                    "
+                                    type="image/webp" />
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/our-works/img-1-desktop.jpg    1x,
+                                        ./images/our-works/img-1-desktop@2x.jpg 2x
+                                    "
+                                    type="image/jpeg" />
+                                <img
+                                    class="our-works__img"
+                                    src="./images/our-works/img-1-desktop.jpg"
+                                    alt="Планшет и клавиатура на столе"
+                            /></picture>
                             <div class="our-works__description">Десктопные приложения</div>
                         </li>
                         <li class="our-works__card" tabindex="0">
-                            <img
-                                class="our-works__img"
-                                src="./images/our-works/img-2.jpg"
-                                alt="Ноутбук, руки, в руке телефон"
-                                width="370"
-                                height="294"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/our-works/img-2-desktop.webp    1x,
+                                        ./images/our-works/img-2-desktop@2x.webp 2x
+                                    "
+                                    type="image/webp" />
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/our-works/img-2-desktop.jpg    1x,
+                                        ./images/our-works/img-2-desktop@2x.jpg 2x
+                                    "
+                                    type="image/jpeg" />
+                                <img
+                                    class="our-works__img"
+                                    src="./images/our-works/img-2-desktop.jpg"
+                                    alt="Ноутбук, руки, в руке телефон"
+                                    width="370"
+                                    height="294"
+                            /></picture>
                             <div class="our-works__description">Мобильные приложения</div>
                         </li>
                         <li class="our-works__card" tabindex="0">
-                            <img
-                                class="our-works__img"
-                                src="./images/our-works/img-3.jpg"
-                                alt="Планшет в руке на фоне стола с ПК"
-                                width="370"
-                                height="294"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/our-works/img-3-desktop.webp    1x,
+                                        ./images/our-works/img-3-desktop@2x.webp 2x
+                                    "
+                                    type="image/webp" />
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/our-works/img-3-desktop.jpg    1x,
+                                        ./images/our-works/img-3-desktop@2x.jpg 2x
+                                    "
+                                    type="image/jpeg" />
+                                <img
+                                    class="our-works__img"
+                                    src="./images/our-works/img-3-desktop.jpg"
+                                    alt="Планшет в руке на фоне стола с ПК"
+                                    width="370"
+                                    height="294"
+                            /></picture>
                             <div class="our-works__description">Дизайнерские решения</div>
                         </li>
                     </ul>
@@ -176,13 +281,64 @@
                     <h2 class="section-title">Наша команда</h2>
                     <ul class="employees">
                         <li class="employees__card" tabindex="0">
-                            <img
-                                class="employees__photo"
-                                src="./images/employees/igor-demyanenko.jpg"
-                                alt="Мужчина с бородой в очках"
-                                width="270"
-                                height="260"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/employees/igor-demyanenko-desktop.webp    1x,
+                                        ./images/employees/igor-demyanenko-desktop@2x.webp 2x,
+                                        ./images/employees/igor-demyanenko-desktop@3x.webp 3x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/employees/igor-demyanenko-desktop.jpg    1x,
+                                        ./images/employees/igor-demyanenko-desktop@2x.jpg 2x,
+                                        ./images/employees/igor-demyanenko-desktop@3x.jpg 3x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/employees/igor-demyanenko-tablet.webp    1x,
+                                        ./images/employees/igor-demyanenko-tablet@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/employees/igor-demyanenko-tablet.jpg    1x,
+                                        ./images/employees/igor-demyanenko-tablet@2x.jpg 2x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./images/employees/igor-demyanenko-mobile.webp    1x,
+                                        ./images/employees/igor-demyanenko-mobile@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./images/employees/igor-demyanenko-mobile.jpg    1x,
+                                        ./images/employees/igor-demyanenko-mobile@2x.jpg 2x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <img
+                                    class="employees__photo"
+                                    src="./images/employees/igor-demyanenko-mobile.jpg"
+                                    alt="Мужчина с бородой в очках"
+                                    width="100%"
+                                />
+                            </picture>
                             <h3 class="employees__title">Игорь Дьяненко</h3>
                             <p class="employees__position" lang="en">Product Designer</p>
                             <ul class="social">
@@ -233,13 +389,64 @@
                             </ul>
                         </li>
                         <li class="employees__card" tabindex="0">
-                            <img
-                                class="employees__photo"
-                                src="./images/employees/olga-repina.jpg"
-                                alt="Женщина блондинка в очках"
-                                width="270"
-                                height="260"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/employees/olga-repina-desktop.webp    1x,
+                                        ./images/employees/olga-repina-desktop@2x.webp 2x,
+                                        ./images/employees/olga-repina-desktop@3x.webp 3x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/employees/olga-repina-desktop.jpg    1x,
+                                        ./images/employees/olga-repina-desktop@2x.jpg 2x,
+                                        ./images/employees/olga-repina-desktop@3x.jpg 3x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/employees/olga-repina-tablet.webp    1x,
+                                        ./images/employees/olga-repina-tablet@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/employees/olga-repina-tablet.jpg    1x,
+                                        ./images/employees/olga-repina-tablet@2x.jpg 2x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./images/employees/olga-repina-mobile.webp    1x,
+                                        ./images/employees/olga-repina-mobile@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./images/employees/olga-repina-mobile.jpg    1x,
+                                        ./images/employees/olga-repina-mobile@2x.jpg 2x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <img
+                                    class="employees__photo"
+                                    src="./images/employees/olga-repina-mobile.jpg"
+                                    alt="Женщина блондинка в очках"
+                                    width="100%"
+                                />
+                            </picture>
                             <h3 class="employees__title">Ольга Репина</h3>
                             <p class="employees__position" lang="en">Frontend Developer</p>
                             <ul class="social">
@@ -290,13 +497,64 @@
                             </ul>
                         </li>
                         <li class="employees__card" tabindex="0">
-                            <img
-                                class="employees__photo"
-                                src="./images/employees/nikolay-tarasov.jpg"
-                                alt="Мужчина в рубашке улыбается"
-                                width="270"
-                                height="260"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/employees/nikolay-tarasov-desktop.webp    1x,
+                                        ./images/employees/nikolay-tarasov-desktop@2x.webp 2x,
+                                        ./images/employees/nikolay-tarasov-desktop@3x.webp 3x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/employees/nikolay-tarasov-desktop.jpg    1x,
+                                        ./images/employees/nikolay-tarasov-desktop@2x.jpg 2x,
+                                        ./images/employees/nikolay-tarasov-desktop@3x.jpg 3x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/employees/nikolay-tarasov-tablet.webp    1x,
+                                        ./images/employees/nikolay-tarasov-tablet@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/employees/nikolay-tarasov-tablet.jpg    1x,
+                                        ./images/employees/nikolay-tarasov-tablet@2x.jpg 2x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./images/employees/nikolay-tarasov-mobile.webp    1x,
+                                        ./images/employees/nikolay-tarasov-mobile@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./images/employees/nikolay-tarasov-mobile.jpg    1x,
+                                        ./images/employees/nikolay-tarasov-mobile@2x.jpg 2x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <img
+                                    class="employees__photo"
+                                    src="./images/employees/nikolay-tarasov-mobile.jpg"
+                                    alt="Мужчина в рубашке улыбается"
+                                    width="100%"
+                                />
+                            </picture>
                             <h3 class="employees__title">Николай Тарасов</h3>
                             <p class="employees__position" lang="en">Marketing</p>
                             <ul class="social">
@@ -347,13 +605,64 @@
                             </ul>
                         </li>
                         <li class="employees__card" tabindex="0">
-                            <img
-                                class="employees__photo"
-                                src="./images/employees/mikhail-ermakov.jpg"
-                                alt="Мужчина с бородой в очках"
-                                width="270"
-                                height="260"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/employees/mikhail-ermakov-desktop.webp    1x,
+                                        ./images/employees/mikhail-ermakov-desktop@2x.webp 2x,
+                                        ./images/employees/mikhail-ermakov-desktop@3x.webp 3x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/employees/mikhail-ermakov-desktop.jpg    1x,
+                                        ./images/employees/mikhail-ermakov-desktop@2x.jpg 2x,
+                                        ./images/employees/mikhail-ermakov-desktop@3x.jpg 3x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/employees/mikhail-ermakov-tablet.webp    1x,
+                                        ./images/employees/mikhail-ermakov-tablet@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/employees/mikhail-ermakov-tablet.jpg    1x,
+                                        ./images/employees/mikhail-ermakov-tablet@2x.jpg 2x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./images/employees/mikhail-ermakov-mobile.webp    1x,
+                                        ./images/employees/mikhail-ermakov-mobile@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./images/employees/mikhail-ermakov-mobile.jpg    1x,
+                                        ./images/employees/mikhail-ermakov-mobile@2x.jpg 2x
+                                    "
+                                    type="image/jpeg"
+                                />
+                                <img
+                                    class="employees__photo"
+                                    src="./images/employees/mikhail-ermakov-mobile.jpg"
+                                    alt="Мужчина с бородой в очках"
+                                    width="100%"
+                                />
+                            </picture>
                             <h3 class="employees__title">Михаил Ермаков</h3>
                             <p class="employees__position" lang="en">UI Designer</p>
                             <ul class="social">
@@ -463,7 +772,7 @@
         <!-- =================== FOOTER =================== -->
         <footer class="footer">
             <!-- логотип -->
-            <div class="container container_flex">
+            <div class="container footer__container">
                 <div class="logo-address-wrapper">
                     <a class="logo footer__logo logo_theme_dark" href="index.html" lang="en"
                         ><span class="logo__prefix">Web</span>Studio</a
@@ -568,7 +877,7 @@
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button type="button" class="modal-close-btn" data-modal-close>
-                    <svg class="modal-close-btn-icon">
+                    <svg class="modal-close-btn-icon" width="18" height="18">
                         <use href="./images/sprite.svg#close-icon"></use>
                     </svg>
                 </button>
@@ -653,7 +962,8 @@
             </div>
         </div>
         <!-- =================== /BACKDROP =================== -->
+        <script src="./js/menu.js"></script>
         <script src="./js/modal.js"></script>
-        <script src="./js/js.js"></script>
+        <!-- <script src="./js/js.js"></script> -->
     </body>
 </html>

@@ -2,25 +2,81 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1600px;
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-color: var(--title-background-color);
+    width: 100%;
+    min-height: 400px;
+    padding: 118px 60px;
+    background-color: #c4c4c4;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url('../images/hero/nero-background.jpg');
-    background-repeat: no-repeat;
+        url('../images/hero/nero-background-mobile.jpg');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+@media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero__container {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/hero/nero-background-mobile@2x.jpg');
+    }
+}
+
 .hero__title {
-    width: 696px;
     margin-bottom: 30px;
     color: var(--title-color);
+
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+@media screen and (min-width: 480px) {
+    .hero__title {
+        width: 360px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .hero__container {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/hero/nero-background-tablet.jpg');
+    }
+    .hero__title {
+        width: 360px;
+    }
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .hero__container {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url('../images/hero/nero-background-tablet@2x.jpg');
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .hero__container {
+        min-height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/hero/nero-background-desktop.jpg');
+    }
+    .hero__title {
+        width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+    }
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .hero__container {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url('../images/hero/nero-background-desktop@2x.jpg');
+        }
+    }
 }
